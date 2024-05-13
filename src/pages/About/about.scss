@@ -1,0 +1,18 @@
+main {
+    /* Hero */
+    #hero {
+        img {
+            filter: brightness(0.65);
+        }
+    }
+
+    #categories {
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+
+        > li {
+            margin: auto;
+        }
+    }
+}
