@@ -1,79 +1,52 @@
-main {
-    /* Hero */
-    #hero {
-        box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+#hero {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
 
-        img {
-            filter: brightness(0.5);
-        }
-
-        h1 {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            margin: 0;
-            width: 100%;
-            text-align: center;
-            color: white;
-            font-size: 48px;
-            font-weight: 700;
-            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .5));
-        }
+    img {
+        filter: brightness(0.5);
     }
 
-    /* Main content */
-    #locations {
-        width: -webkit-fill-available;
-        background-color: #f6f6f6;
-        border-radius: 25px;
+    h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        color: white;
+        font-size: 48px;
+        font-weight: 700;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, .5));
+    }
+}
 
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        gap: 50px;
-        padding: 50px;
+#logements {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 50px;
+    padding: 50px;
+}
 
-        .card {
-            position: relative;
-            width: 340px;
-            height: 340px;
-            border-radius: 10px;
-            overflow: hidden;
 
-            li {
-                width: -webkit-fill-available;
-                width: moz-available;
-                height: -webkit-fill-available;
-                height: moz-available;
-                background-color: var(--primary);
-                padding: 20px;
-                display: flex;
-                flex-direction: column;
-                justify-content: end;
+@media screen and (max-width: 576px) {
+    main {
+        row-gap: 30px;
+
+        #hero {
+            box-shadow: none;
+
+            h1 {
+                text-align: start;
+                padding-left: 30px;
+                font-size: 24px;
             }
+        }
 
-            h2 {
-                font-size: 18px;
-                font-weight: 700;
-                color: #fff;
-                padding: 0;
-                margin: 0;
-                z-index: 1;
-            }
-
-            &::after {
-                content: '';
-                display: block;
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                top: 200px;
-                left: 0;
-                background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
-                z-index: 0;
-            }
+        #logements {
+            padding: unset;
+            justify-content: center;
         }
     }
 }

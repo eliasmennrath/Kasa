@@ -15,11 +15,28 @@ section {
         font-weight: 500;
     }
 
-    a {
+    .homeLink {
         margin: 50px 0;
         color: #000;
         text-decoration: underline;
         font-size: 18px;
         font-weight: 500;
+    }
+}
+
+
+@media screen and (max-width: 576px) {
+    section {
+        h1 {
+            font-size: 96px;
+        }
+    
+        p {
+            font-size: 18px;
+        }   
+    
+        .homeLink {
+            font-size: 14px;
+        }
     }
 }

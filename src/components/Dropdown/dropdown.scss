@@ -1,7 +1,11 @@
 .dropdown {
+    position: relative;
+    display: inline-block;
     width: 1023px;
     max-width: 46%;
 
+
+    /* Dropdown Button */
     .dropdownTitle {
         display: flex;
         justify-content: space-between;
@@ -12,6 +16,8 @@
         border-radius: 5px;
         padding: 0 15px;
     
+        cursor: pointer;
+
         h2 {
             text-transform: capitalize;
             font-size: 18px;
@@ -25,39 +31,51 @@
                 cursor: pointer;
                 transform: translateY(2px);
             }
+
+            &.rotate {
+                transform: rotate(180deg);
+            }
         }
     }
     
+    
     .dropdownContent {
-        height: 0;
-        padding: 0;
-
-        display: flex;
-        flex-direction: column;
-        row-gap: 5px;
-        background: #f6f6f6;
+        background-color: #f6f6f6;
+        width: 100%;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         border-radius: 10px 10px 5px 5px;
         font-size: 18px;
         font-weight: 400;
+        max-height: 0;
         overflow: hidden;
-        transition: height .5s;
+        transition: .35s;
 
-
-    }
-
-    &.active {
-        .fa-chevron-up {
-            transform: rotate(180deg);
-
-            &:hover {
-                cursor: pointer;
-            }
+        li {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
         }
 
-        .dropdownContent {
-            // height: Set in js;
-            padding: 15px;
-            
+        &.show {
+            max-height: 460px;
+        }
+    }
+    
+}
+
+@media screen and (max-width: 576px) {
+    .dropdown {
+        width: 100% !important;
+        max-width: unset;
+        
+        .dropdownTitle {
+            height: 30px;
+            font-size: 13px;
+
+            h2 {
+                font-size: 13px;
+            }
         }
     }
 }
