@@ -57,10 +57,6 @@
         transition: 0.6s ease;
         border-radius: 0 3px 3px 0;
         user-select: none;
-
-        &.d-none {
-            display: none;
-        }
     }
 
     /* Position the "next button" to the right */
@@ -73,6 +69,10 @@
     .prev:hover, .next:hover {
         background-color: rgba(0,0,0,0.5);
     }
+}
+
+.d-none {
+    display: none;
 }
 
 @media screen and (max-width: 576px) {

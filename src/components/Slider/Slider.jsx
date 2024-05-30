@@ -26,7 +26,7 @@ function Slider({title, pictures}) {
             return (
 
                     <div className={"slide fade" + (index === sliderIndex ? " show" : "")} key={"slide-" + index}>
-                        <div className="sliderCount">{index + 1} / {pictures.length}</div>
+                        <div className={"sliderCount" + (pictures.length === 1 ? " d-none" : "")}>{index + 1} / {pictures.length}</div>
                         <img src={picture} alt={title} className="logementPreview"/>
                     </div>
 
