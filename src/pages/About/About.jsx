@@ -9,7 +9,6 @@ import Dropdown from "../../components/Dropdown/Dropdown";
 import data from '../../about.json'
 
 export default function About() {
-    console.log( data.aboutList)
     return (
         <React.Fragment>
 
