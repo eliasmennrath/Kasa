@@ -1,4 +1,4 @@
-section {
+section#errorSection {
     display: flex;
     flex-direction: column;
     row-gap: 70px;
@@ -26,7 +26,7 @@ section {
 
 
 @media screen and (max-width: 576px) {
-    section {
+    section#errorSection {
         h1 {
             font-size: 96px;
         }

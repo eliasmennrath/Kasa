@@ -3,7 +3,7 @@ import "./error404.scss";
 
 export default function Error404() {
     return (
-        <section>
+        <section id="errorSection">
             <h1>404</h1>
     
             <p>Oups! La page que vous demandez n'existe pas.</p>
