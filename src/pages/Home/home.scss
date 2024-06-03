@@ -27,6 +27,9 @@
     align-items: center;
     gap: 50px;
     padding: 50px;
+    background: rgba(246, 246, 246, 1);
+    box-sizing: border-box;
+    border-radius: 25px;
 }
 
 
@@ -47,6 +50,7 @@
         #logements {
             padding: unset;
             justify-content: center;
+            background: none;
         }
     }
 }
